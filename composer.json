@@ -1,5 +1,5 @@
 {
-  "name": "webarchitect609/bitrix-cache",
+  "name": "letraceursnork/bitrix-cache",
   "description": "Comfortable fluent interface for Bitrix cache. Anti-stampede cache protection.",
   "homepage": "https://github.com/webarchitect609/bitrix-cache",
   "keywords": [
@@ -24,13 +24,21 @@
       "name": "Nicolas Grekas",
       "email": "p@tchwork.com",
       "role": "Indirect Contributor"
+    },
+    {
+      "name": "Ilya Saligzhanov",
+      "email": "le_traceur_snork@mail.ru",
+      "role": "Contributor"
     }
   ],
+  "replace": {
+    "webarchitect609/bitrix-cache":"1.11.2"
+  },
   "require": {
     "php": "^7.2 || ^8.0",
-    "psr/cache": "^1.0",
-    "psr/log": "^1.1",
-    "psr/simple-cache": "^1.0",
+    "psr/cache": "^1.0|^2.0|^3.0",
+    "psr/log": "^1.1|^2.0|^3.0",
+    "psr/simple-cache": "^1.0|^2.0|^3.0",
     "symfony/contracts": "^1.1.8 || ^2.0 || ^3.0",
     "symfony/polyfill-php80": "^1.18"
   },
@@ -72,11 +80,5 @@
   },
   "config": {
     "sort-packages": true
-  },
-  "funding": [
-    {
-      "type": "ЮMoney",
-      "url": "https://sobe.ru/na/bitrix_cache"
-    }
-  ]
+  }
 }
