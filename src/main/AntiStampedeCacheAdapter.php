@@ -121,7 +121,7 @@ class AntiStampedeCacheAdapter implements CacheInterface, CacheItemPoolInterface
      * @return bool
      * @noinspection PhpMissingReturnTypeInspection
      */
-    public function commit()
+    public function commit(): bool
     {
         $ok = true;
         $byLifetime = $this->mergeByLifetime;

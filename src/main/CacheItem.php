@@ -64,7 +64,7 @@ final class CacheItem implements ItemInterface
     /**
      * {@inheritdoc}
      */
-    public function get()
+    public function get(): mixed
     {
         return $this->value;
     }
@@ -82,7 +82,7 @@ final class CacheItem implements ItemInterface
      *
      * @return $this
      */
-    public function set($value): self
+    public function set($value): static
     {
         $this->value = $value;
 
@@ -94,7 +94,7 @@ final class CacheItem implements ItemInterface
      *
      * @return $this
      */
-    public function expiresAt($expiration): self
+    public function expiresAt($expiration): static
     {
         if (null === $expiration) {
             $this->expiry = null;
@@ -118,7 +118,7 @@ final class CacheItem implements ItemInterface
      *
      * @return $this
      */
-    public function expiresAfter($time): self
+    public function expiresAfter($time): static
     {
         if (null === $time) {
             $this->expiry = null;
@@ -143,7 +143,7 @@ final class CacheItem implements ItemInterface
     /**
      * {@inheritdoc}
      */
-    public function tag($tags): ItemInterface
+    public function tag($tags): static
     {
         if (!$this->isTaggable) {
             throw new LogicException(
